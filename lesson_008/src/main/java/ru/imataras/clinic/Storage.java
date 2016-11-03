@@ -4,6 +4,7 @@ import java.util.Collection;
 
 /**
  * TODO: comment
+ *
  * @author imataras
  * @since 06.09.2016
  */

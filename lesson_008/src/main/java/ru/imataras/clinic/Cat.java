@@ -1,7 +1,15 @@
 package ru.imataras.clinic;
 
 /**
- * Created by Ivan on 17.08.2016.
+ * Класс описывает кота.
+ *
+ * @author imataras
+ * @since 22.09.2016
  */
-public class Cat {
+
+public class Cat extends Animal {
+
+    public Cat(String name) {
+        super(name);
+    }
 }
