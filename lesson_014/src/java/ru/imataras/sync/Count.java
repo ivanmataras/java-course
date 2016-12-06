@@ -5,5 +5,4 @@ package ru.imataras.sync;
  */
 public class Count {
 
-
 }
