@@ -139,4 +139,5 @@ public class UserActions extends HttpServlet {
         }
         resp.sendRedirect(String.format("%s/users.do", req.getContextPath()));
     }
+
 }
