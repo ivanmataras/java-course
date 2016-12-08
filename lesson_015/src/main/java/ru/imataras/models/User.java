@@ -9,6 +9,7 @@ import java.util.Calendar;
  * @since 08.12.2016
  */
 public class User {
+
     private int id;
     private String name;
     private int age;

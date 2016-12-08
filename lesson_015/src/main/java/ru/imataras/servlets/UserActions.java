@@ -29,7 +29,8 @@ import static org.slf4j.LoggerFactory.getLogger;
  * @since 08.12.2016
  */
 public class UserActions extends HttpServlet {
-    private static final Logger log = getLogger(UserActions.class);
+
+    //private static final Logger log = getLogger(UserActions.class);
     private final UserStorage storage = UserStorage.getInstance();
     private final AtomicInteger ids = new AtomicInteger(0);
 
@@ -134,7 +135,7 @@ public class UserActions extends HttpServlet {
                 this.storage.add(user);
             }
         } catch (Exception e) {
-            log.error("Error", e);
+            //log.error("Error", e);
         }
         resp.sendRedirect(String.format("%s/users.do", req.getContextPath()));
     }

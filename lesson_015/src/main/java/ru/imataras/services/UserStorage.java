@@ -13,7 +13,8 @@ import static org.slf4j.LoggerFactory.getLogger;
  * @since 08.12.2016
  */
 public class UserStorage {
-    private static final Logger log = getLogger(UserStorage.class);
+
+    //private static final Logger log = getLogger(UserStorage.class);
     private static final UserStorage INSTANCE = new UserStorage();
     private final List<User> users = new ArrayList<User>();
 
