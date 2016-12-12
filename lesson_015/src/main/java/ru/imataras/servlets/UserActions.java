@@ -30,13 +30,12 @@ import static org.slf4j.LoggerFactory.getLogger;
  */
 public class UserActions extends HttpServlet {
 
-    //private static final Logger log = getLogger(UserActions.class);
+    private static final Logger log = getLogger(UserActions.class);
     private final UserStorage storage = UserStorage.getInstance();
     private final AtomicInteger ids = new AtomicInteger(0);
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
         resp.setCharacterEncoding("UTF-8");
         PrintWriter out = new PrintWriter(resp.getOutputStream());
@@ -113,8 +112,7 @@ public class UserActions extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
             boolean update = "update".equals(req.getParameter("method"));
             Calendar cal = Calendar.getInstance();
@@ -135,7 +133,7 @@ public class UserActions extends HttpServlet {
                 this.storage.add(user);
             }
         } catch (Exception e) {
-            //log.error("Error", e);
+            log.error("Error", e);
         }
         resp.sendRedirect(String.format("%s/users.do", req.getContextPath()));
     }
