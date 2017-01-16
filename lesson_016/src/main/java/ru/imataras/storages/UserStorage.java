@@ -59,7 +59,7 @@ public class UserStorage {
         return this.users;
     }
 
-    public Optional<User> findByCridentional(String username, String password) {
+    public Optional<User> findByCredentional(String username, String password) {
         return this.users.stream().filter(
                 user -> user.getUsername().equals(username) && user.getPassword().equals(password)
         ).findFirst();
