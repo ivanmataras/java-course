@@ -27,7 +27,7 @@ public class User {
     private String name;
     private Calendar created;
 
-    private List<Pet> pets = new ArrayList<>();
+    private List<Pet> pets = new ArrayList<Pet>();
 
     public User() {
 
