@@ -20,7 +20,7 @@ public class RoleStorage {
 
     private static final Logger log = LoggerFactory.getLogger(RoleStorage.class);
     private static final RoleStorage instance = new RoleStorage();
-    private List<Role> roles = new CopyOnWriteArrayList<>();
+    private List<Role> roles = new CopyOnWriteArrayList<Role>();
     private final AtomicInteger ids = new AtomicInteger(0);
 
     private RoleStorage() {
@@ -46,4 +46,5 @@ public class RoleStorage {
     public List<Role> getAll() {
         return this.roles;
     }
+
 }

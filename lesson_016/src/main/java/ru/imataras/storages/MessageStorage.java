@@ -56,4 +56,5 @@ public class MessageStorage {
         message.setId(messageId);
         this.messages.remove(message);
     }
+
 }

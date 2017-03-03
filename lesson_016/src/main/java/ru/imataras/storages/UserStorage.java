@@ -5,7 +5,6 @@ import ru.imataras.models.Role;
 import ru.imataras.models.User;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -24,7 +23,7 @@ public class UserStorage {
 
     private static final Logger log = getLogger(UserStorage.class);
     private static final UserStorage INSTANCE = new UserStorage();
-    private final List<User> users = new CopyOnWriteArrayList<>();
+    private final List<User> users = new CopyOnWriteArrayList<User>();
     private final AtomicInteger ids = new AtomicInteger(0);
     private final RoleStorage roles = RoleStorage.getInstance();
     private final MessageStorage messages = MessageStorage.getInstance();
@@ -34,10 +33,6 @@ public class UserStorage {
         root.setId(ids.incrementAndGet());
         root.setUsername("root");
         root.setPassword("root");
-        //    necessary initialization
-        root.setLogin("root");
-        root.setName("root");
-        root.setCreated(Calendar.getInstance());
         root.setRole(this.roles.findById(1).get());
         this.users.add(root);
     }
@@ -59,7 +54,7 @@ public class UserStorage {
         return this.users;
     }
 
-    public Optional<User> findByCredentional(String username, String password) {
+    public Optional<User> findByCridentional(String username, String password) {
         return this.users.stream().filter(
                 user -> user.getUsername().equals(username) && user.getPassword().equals(password)
         ).findFirst();
