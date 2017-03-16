@@ -1,6 +1,6 @@
 package ru.imataras.models;
 
-//import javax.persistence.*;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
