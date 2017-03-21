@@ -21,6 +21,7 @@ import static org.slf4j.LoggerFactory.getLogger;
  * @author imataras
  * @since 03.03.2017
  */
+
 public class LoginServlet extends HttpServlet {
 
     private static final Logger log = getLogger(LoginServlet.class);
